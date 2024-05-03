@@ -93,7 +93,7 @@ Usage: ./normal_purity_titration.sh \
 These scripts were used as a pre-processing step before performing purity titrations, in order to ensure that there would not be duplicate reads in our titration set and evaluation set. 
 
 These scripts with split a bam file into two sub-bams, so that there are no overlapping reads in each of the two split sub-bams. 
-Two scripts are identical except for naming conventions specified for "normal" or "tumor" bams. These scripts use samtools with 60 threads and require large disk space and memory due to handling files in sam format during intermediate steps.
+Two scripts are identical except for naming conventions specified for "normal" or "tumor" bams. These scripts use samtools with 60 threads and require large disk space and memory due to handling files in SAM format during intermediate steps.
 
 ### split_bam_normal.sh
 run locally:
