@@ -1,7 +1,7 @@
 # Titration Scripts
 Scripts used to generate titration bams for DeepSomatic analysis. 
 
-# Coverage
+## Coverage
 ### coverage_titration.sh
 This script takes in two bam files (`normal.bam`, `tumor.bam`) and downsamples the `tumor.bam` to 30x, 60x, 90x coverage and downsamples the `normal.bam` to 20x, 25x, 30x coverage.
 If input bam file has a coverage less 30x, 60x, 90x (tumor) or 20x, 25x, 30x (tumor), the script will automatically skip downsampling to that coverage.
@@ -32,7 +32,7 @@ Usage: ./downsample_bam.sh \
    -l <goal_coverage_list> \
    -o <output_directory>
 ```
-# Purity
+## Purity
 
 ### purity_titration.sh
 This script takes in two bam files  (`normal.bam`, `tumor.bam`) and creates purity titration bams.
@@ -89,7 +89,7 @@ Usage: ./normal_purity_titration.sh \
    -o <output_directory> \
    -l <normal_percent_list>
 ```
-# Split Bams
+## Split Bams
 These scripts were used as a pre-processing step before performing purity titrations, in order to ensure that there would not be duplicate reads in our titration set and evaluation set. 
 
 These scripts with split a bam file into two sub-bams, so that there are no overlapping reads in each of the two split sub-bams. 
