@@ -2,7 +2,7 @@
 Scripts used to generate titration bams for DeepSomatic analysis. 
 
 # Coverage
-## coverage_titration.sh
+### coverage_titration.sh
 This script takes in two bam files (`normal.bam`, `tumor.bam`) and downsamples the `tumor.bam` to 30x, 60x, 90x coverage and downsamples the `normal.bam` to 20x, 25x, 30x coverage.
 If input bam file has a coverage less 30x, 60x, 90x (tumor) or 20x, 25x, 30x (tumor), the script will automatically skip downsampling to that coverage.
 This script uses samtools with 30 threads.
@@ -19,7 +19,7 @@ Usage: ./coverage_titration.sh \
    -o <output_directory> 
 ```
 
-## downsample_bam.sh
+### downsample_bam.sh
 This script is a generalized version of `coverage_titration.sh`, allowing user to specify which coverages to downsample to, and does not differentiate between tumor or normal bams.
 This script uses samtools with 30 threads.
 
