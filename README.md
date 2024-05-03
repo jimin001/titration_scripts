@@ -34,7 +34,7 @@ Usage: ./downsample_bam.sh \
 ```
 # Purity
 
-## purity_titration.sh
+### purity_titration.sh
 This script takes in two bam files  (`normal.bam`, `tumor.bam`) and creates purity titration bams.
 Creates purity titration bams at : 60%, 70%, 80%, 90% tumor purity and 90%, 95% normal purity.
 This script uses samtools with 30 threads.
@@ -55,7 +55,7 @@ Usage: ./purity_titration.sh \
 
 tumor_purity_titration.sh and normal_purity_titration.sh are almost identical, only difference is the naming convention for output files.
 
-## tumor_purity_titration.sh
+### tumor_purity_titration.sh
 This script is an adaptation of `purity_titration.sh`, and only creates tumor purity titrations and allows user to specify which tumor purity percentages to titrate input bams to. 
 This script uses samtools with 60 threads.
 
@@ -72,7 +72,7 @@ Usage: ./tumor_purity_titration.sh \
    -o <output_directory> \
    -l <tumor_percent_list>
 ```
-## normal_purity_titration.sh
+### normal_purity_titration.sh
 This script is an adaptation of `purity_titration.sh`, and only creates normal purity titrations and allows user to specify which normal purity percentages to titrate input bams to. 
 This script uses samtools with 30 threads.
 
@@ -95,7 +95,7 @@ These scripts were used as a pre-processing step before performing purity titrat
 These scripts with split a bam file into two sub-bams, so that there are no overlapping reads in each of the two split sub-bams. 
 Two scripts are identical except for naming conventions specified for "normal" or "tumor" bams. 
 
-## split_bam_normal.sh
+### split_bam_normal.sh
 run locally:
 ```
 Usage: ./split_bam_normal.sh \
@@ -108,7 +108,7 @@ Usage: ./split_bam_normal.sh \
    -o <output_directory>
 ```
 
-## split_bam_tumor.sh
+### split_bam_tumor.sh
 run locally:
 ```
 Usage: ./split_bam_tumor.sh \
