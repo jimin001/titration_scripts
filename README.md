@@ -53,7 +53,7 @@ Usage: ./purity_titration.sh \
    -o <output_directory>
 ```
 
-tumor_purity_titration.sh and normal_purity_titration.sh are almost identical, only difference is the naming convention for output files.
+`tumor_purity_titration.sh` and `normal_purity_titration.sh` are almost identical, only difference is the naming convention for output files.
 
 ### tumor_purity_titration.sh
 This script is an adaptation of `purity_titration.sh`, and only creates tumor purity titrations and allows user to specify which tumor purity percentages to titrate input bams to. 
@@ -93,7 +93,7 @@ Usage: ./normal_purity_titration.sh \
 These scripts were used as a pre-processing step before performing purity titrations, in order to ensure that there would not be duplicate reads in our titration set and evaluation set. 
 
 These scripts with split a bam file into two sub-bams, so that there are no overlapping reads in each of the two split sub-bams. 
-Two scripts are identical except for naming conventions specified for "normal" or "tumor" bams. 
+Two scripts are identical except for naming conventions specified for "normal" or "tumor" bams. These scripts use samtools with 60 threads and require large disk space and memory due to handling files in sam format during intermediate steps.
 
 ### split_bam_normal.sh
 run locally:
